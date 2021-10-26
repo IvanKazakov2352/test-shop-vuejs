@@ -1,0 +1,97 @@
+@import "./variables.scss";
+
+.form {
+  width: 365px;
+  min-height: 475px;
+  height: 470px;
+  background: #fffefb;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
+    0px 6px 10px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+.form-inputs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-input-label {
+  margin-top: $margin-top-form-input-label;
+  margin-bottom: $margin-bottom-form-input-label;
+  margin-left: $margin-left-form-input-label;
+  margin-right: $margin-right-form-input-label;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #49485e;
+}
+
+.star {
+  color: #ff8484;
+  border-radius: 4px;
+}
+.form-input {
+  width: 314px;
+  height: 36px;
+  background: #fffefb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+  margin-left: $margin-left-form-input-label;
+  margin-right: $margin-right-form-input-label;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #49485e;
+  text-indent: 16px;
+}
+.form-textarea {
+  width: 284px;
+  height: 108px;
+  background: #fffefb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+  margin-left: $margin-left-form-input-label;
+  margin-right: $margin-right-form-input-label;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #49485e;
+  resize: none;
+  padding: 16px 16px 16px 16px;
+}
+.form-button {
+  margin-top: $margin-top-form-input-label;
+  margin-bottom: $margin-bottom-form-input-label;
+  margin-left: $margin-left-form-input-label;
+  margin-right: $margin-right-form-input-label;
+  width: 319px;
+  height: 36px;
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+  color: #ffffff;
+  background: #7bae73;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+}
