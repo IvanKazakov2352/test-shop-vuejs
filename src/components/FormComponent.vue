@@ -57,7 +57,7 @@
         v-mask="`### ###`"
         :class="$v.form.price.$error ? `form-invalid` : ``"
         placeholder="Введите цену товара"
-        v-model="$v.form.price.$model"
+        v-model.number="$v.form.price.$model"
       />
       <p
         v-if="$v.form.price.$dirty && !$v.form.price.required"
