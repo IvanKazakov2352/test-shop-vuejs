@@ -97,7 +97,14 @@ export default {
   }),
   methods: {
     addProduct() {
-      console.log("Product");
+      const product = {
+        id: this.$uuid.v4(),
+        nameProduct: this.form.nameProduct,
+        description: this.form.description,
+        price: this.form.price,
+        photo: this.form.photo
+      }
+      this.$store.commit("addProduct", product)
     },
   },
   mixins: [validationMixin],

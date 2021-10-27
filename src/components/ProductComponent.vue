@@ -5,24 +5,30 @@
     @mouseover="flexButtonDelete"
     @mouseleave="noneButtonDelete"
   >
-    <button class="product-button-delete" ref="button">
+    <button class="product-button-delete" ref="button" @click="deleteProduct(product.id)">
       <img class="product-delete-icon" src="../assets/delete-icon-white.png" />
     </button>
 
     <img
       class="product-photo"
-      src="https://richcoward.com/wp-content/uploads/2021/08/product-development.png"
+      :src="product.photo"
     />
-    <h1 class="product-name">Наименование товара</h1>
+    <h1 class="product-name">{{product.nameProduct}}</h1>
     <p class="product-description">
-      Довольно-таки интересное описание товара в несколько строк. Довольно-таки
-      интересное описание товара в несколько строк
+      {{product.description}}
     </p>
-    <h1 class="product-price">12 000 руб</h1>
+    <h1 class="product-price">{{product.price}} руб</h1>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    product: {
+      type: Object,
+      default: () => {},
+      required: true,
+    },
+  },
   methods: {
     flexButtonDelete() {
       this.$refs.button.style.display = "flex";
@@ -31,6 +37,9 @@ export default {
     noneButtonDelete() {
       this.$refs.button.style.display = "none";
     },
+    deleteProduct(id) {
+      this.$store.commit("deleteProduct", id)
+    }
   },
 };
 </script>

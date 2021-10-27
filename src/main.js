@@ -4,10 +4,12 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import VueMask from "v-mask";
+import UUID from "vue-uuid";
 import "./scss/index.scss"
 
 Vue.config.productionTip = false
 Vue.use(VueMask);
+Vue.use(UUID);
 
 new Vue({
   router,
