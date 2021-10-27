@@ -54,7 +54,6 @@
       <input
         class="form-input"
         type="text"
-        v-mask="`### ###`"
         :class="$v.form.price.$error ? `form-invalid` : ``"
         placeholder="Введите цену товара"
         v-model.number="$v.form.price.$model"
