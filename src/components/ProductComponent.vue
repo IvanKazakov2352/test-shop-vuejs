@@ -8,6 +8,7 @@
     <button class="product-button-delete" ref="button">
       <img class="product-delete-icon" src="../assets/delete-icon-white.png" />
     </button>
+
     <img
       class="product-photo"
       src="https://richcoward.com/wp-content/uploads/2021/08/product-development.png"
@@ -33,3 +34,13 @@ export default {
   },
 };
 </script>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

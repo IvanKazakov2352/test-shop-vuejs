@@ -32,4 +32,23 @@
   background-position-x: 8px;
   font-family: $font-family;
   cursor: pointer;
+  margin-right: 595px;
+  @media screen and (max-width: 1930px) {
+    & {
+      margin-right: 190px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    & {
+      margin-right: -65px;
+    }
+  }
+  @media screen and (max-width: 814px) {
+    & {
+      margin-right: 145px;
+    }
+  }
+  .select-option {
+    width: 121px;
+  }
 }

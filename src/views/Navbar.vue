@@ -2,7 +2,7 @@
   <div class="navbar">
     <h1 class="navbar-title">Добавление товара</h1>
     <select class="select">
-      <option v-for="select in selects" :key="select">{{ select }}</option>
+      <option class="select-option" v-for="select in selects" :key="select">{{ select }}</option>
     </select>
   </div>
 </template>
