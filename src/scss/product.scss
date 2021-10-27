@@ -2,27 +2,101 @@
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 345px);
+  grid-template-columns: repeat(3, 355px);
   width: 1000px;
   max-width: 1000px;
   flex-wrap: wrap;
-  @media screen and (max-width: 814px) {
+  @media screen and (max-width: 1200px) {
     & {
-      display: flex;
-      flex-direction: column;
-      width: 400px;
+      display: grid;
+      grid-template-columns: repeat(2, 345px);
     }
   }
-}
+  @media screen and (max-width: 1140px) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(1, 345px);
+    }
+  }
+  @media screen and (max-width: 814px) {
+    & {
+      display: grid;
+      grid-template-columns: repeat(1, 150px);
+    }
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 332px;
+    max-width: 332px;
+    height: 423px;
+    max-height: auto;
+    background: #fffefb;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
+      0px 6px 10px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+    margin-bottom: 16px;
 
-.product {
-  display: flex;
-  justify-content: center;
-  width: 332px;
-  height: 423px;
-  background: #fffefb;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04),
-    0px 6px 10px rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-  margin-bottom: 10px;
+    .product-button-delete {
+      display: none;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      outline: none;
+      border: none;
+      background: #ff8484;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: -10px auto 10px 315px;
+      transition: 2s;
+
+      .product-delete-icon {
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        background: aquamarine;
+        transition: 2s;
+        cursor: pointer;
+      }
+    }
+
+    .product-photo {
+      width: 332px;
+      height: 200px;
+      border-radius: 4px 4px 0px 0px;
+    }
+    .product-name {
+      width: 201px;
+      height: 25px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 25px;
+      color: #3f3f3f;
+      margin-left: 16px;
+    }
+    .product-description {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #3f3f3f;
+      padding: 0 16px 0 16px;
+    }
+    .product-price {
+      width: 117px;
+      height: 30px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: #3f3f3f;
+      margin-left: 16px;
+      margin-bottom: 24px;
+    }
+  }
 }
