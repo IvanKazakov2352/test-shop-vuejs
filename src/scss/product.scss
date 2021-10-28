@@ -6,6 +6,7 @@
   width: 1000px;
   max-width: 1000px;
   flex-wrap: wrap;
+  opacity: 0;
   @media screen and (max-width: 1200px) {
     & {
       display: grid;
@@ -36,6 +37,7 @@
       0px 6px 10px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
     margin-bottom: 16px;
+    transform: translateY(-100px);
 
     .product-button-delete {
       display: none;

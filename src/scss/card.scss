@@ -7,6 +7,12 @@
   height: 70px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
+  transition: 2s ease-in-out;
+  &:hover {
+    transition: 2s ease-in-out;
+    background-color: rgb(222, 241, 153);
+    cursor: pointer;
+  }
 
   .card-title {
     font-style: normal;

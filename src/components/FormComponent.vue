@@ -57,6 +57,7 @@
         :class="$v.form.price.$error ? `form-invalid` : ``"
         placeholder="Введите цену товара"
         v-model.number="$v.form.price.$model"
+        v-mask="`## ###`"
       />
       <p
         v-if="$v.form.price.$dirty && !$v.form.price.required"
@@ -101,9 +102,9 @@ export default {
         nameProduct: this.form.nameProduct,
         description: this.form.description,
         price: this.form.price,
-        photo: this.form.photo
-      }
-      this.$store.commit("addProduct", product)
+        photo: this.form.photo,
+      };
+      this.$store.commit("addProduct", product);
     },
   },
   mixins: [validationMixin],
